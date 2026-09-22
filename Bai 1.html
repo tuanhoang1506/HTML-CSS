@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio cá nhân - Sinh viên Công nghệ Thông tin & Thiết kế Web">
+    <title>Trần Minh Quân | Personal Blog & Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- BƯỚC 4: HEADER STICKY (CỐ ĐỊNH KHI CUỘN) -->
+    <header class="header-sticky">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#hero" class="logo-txt">TMQ<span>.DEV</span></a>
+            </div>
+            <nav class="nav-links">
+                <a href="#hero">Trang chủ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#skills">Kỹ năng</a>
+                <a href="#projects">Dự án</a>
+                <a href="#journey">Hành trình</a>
+                <a href="#blog">Bài viết</a>
+                <a href="#contact">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BƯỚC 5: HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h4 class="hero-greeting">Xin chào! Mình là</h4>
+                <!-- Hiệu ứng đổi ngôn ngữ bằng CSS animation -->
+                <div class="animated-text">
+                    <span class="text-swap">Minh Quân</span>
+                </div>
+                <p class="hero-desc">
+                    Sinh viên năm 3 chuyên ngành <strong>Kỹ thuật Phần mềm</strong>, đam mê kiến tạo giao diện website tinh tế, tối ưu trải nghiệm người dùng và lập trình hệ thống.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Xem hồ sơ</a>
+                    <a href="#contact" class="btn btn-secondary">Liên hệ tôi</a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <div class="avatar-box">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80" alt="Ảnh chân dung cá nhân">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 6: SECTION GIỚI THIỆU BẢN THÂN -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="title-decor">Giới Thiệu Bản Thân</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead-text">
+                        Mình hiện là sinh viên khoa <em>Công nghệ Thông tin</em> tại <strong>Trường Đại học Bách Khoa</strong>. Với tinh thần không ngừng học hỏi và tư duy cầu tiến, mình luôn mong muốn biến các ý tưởng phức tạp thành những sản phẩm web trực quan, mượt mà và thực tế.
+                    </p>
+                    <p>
+                        Bên cạnh lập trình, sở thích của mình là <span class="highlight">nghiên cứu UI/UX</span>, đọc sách chuyên môn và tham gia các hoạt động nghiên cứu khoa học. Định hướng dài hạn của mình là trở thành một <strong>Fullstack Web Engineer</strong> chuyên nghiệp.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 7: SECTION KỸ NĂNG / CÔNG CỤ (PILL BADGE) -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="title-decor">Kỹ Năng & Công Cụ</h2>
+            <div class="badge-grid">
+                <span class="skill-badge">HTML5 Semantics</span>
+                <span class="skill-badge">CSS3 & SASS</span>
+                <span class="skill-badge">Responsive Grid</span>
+                <span class="skill-badge">JavaScript (ES6+)</span>
+                <span class="skill-badge">React.js</span>
+                <span class="skill-badge">C / C++ Core</span>
+                <span class="skill-badge">Git & GitHub</span>
+                <span class="skill-badge">Figma UI Design</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 8: SECTION DỰ ÁN NỔI BẬT (CARD ĐỔ BÓNG, HOVER NỔI LÊN) -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="title-decor">Dự Án Nổi Bật</h2>
+            <div class="project-cards">
+
+                <article class="proj-card">
+                    <div class="proj-thumb">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=80" alt="Dự án quản lý">
+                    </div>
+                    <div class="proj-content">
+                        <h3>Flight Ticket Booking System</h3>
+                        <p>Hệ thống hỗ trợ đặt vé máy bay viết bằng C kết hợp cấu trúc danh sách liên kết và quản trị dữ liệu nhị phân chuẩn xác.</p>
+                        <a href="#" class="view-link">Xem chi tiết &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="proj-card">
+                    <div class="proj-thumb">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&auto=format&fit=crop&q=80" alt="Website Cafe">
+                    </div>
+                    <div class="proj-content">
+                        <h3>The Cozy Bean Platform</h3>
+                        <p>Website thực đơn cà phê tích hợp giao diện hiện đại, responsive trên mọi thiết bị với CSS3 layout tinh gọn.</p>
+                        <a href="#" class="view-link">Xem chi tiết &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 9: SECTION HÀNH TRÌNH / DÒNG THỜI GIAN -->
+    <section class="journey-section" id="journey">
+        <div class="container">
+            <h2 class="title-decor">Hành Trình Cá Nhân</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-box">
+                        <span class="time-stamp">2023 - Hiện tại</span>
+                        <h4>Sinh Viên Kỹ Thuật Phần Mềm</h4>
+                        <p>Đại học Bách Khoa - Học bổng sinh viên giỏi, thành viên tích cực CLB Lập trình Sáng tạo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-box">
+                        <span class="time-stamp">2024</span>
+                        <h4>Frontend & UI/UX Designer Trainee</h4>
+                        <p>Tham gia các dự án web mã nguồn mở, nghiên cứu chuyên sâu về tối ưu CSS và Web Accessibility.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-box">
+                        <span class="time-stamp">2020 - 2023</span>
+                        <h4>Trường THPT Chuyên</h4>
+                        <p>Tốt nghiệp loại Xuất sắc, giải Khuyến khích Tin học Trẻ cấp Tỉnh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 10: SECTION BÀI VIẾT KÈM ASIDE (FLEXBOX / MULTI-COLUMNS) -->
+    <section class="blog-section" id="blog">
+        <div class="container blog-layout">
+            <main class="blog-posts">
+                <h2 class="title-decor">Chia Sẻ Chuyên Môn</h2>
+                <article class="post-item">
+                    <h3>Tối ưu hóa bố cục giao diện với CSS Flexbox và Grid</h3>
+                    <p class="post-excerpt">
+                        Cách xây dựng hệ thống lưới tùy biến không phụ thuộc thư viện bên ngoài, nâng cao tốc độ tải trang và chỉ số SEO kỹ thuật...
+                    </p>
+                </article>
+                <article class="post-item">
+                    <h3>Ứng dụng Dynamic Memory trong dự án C thực chiến</h3>
+                    <p class="post-excerpt">
+                        Quản lý bộ nhớ hiệu quả, ngăn chặn hiện tượng rò rỉ bộ nhớ (memory leaks) với con trỏ và heap trong C hiện đại...
+                    </p>
+                </article>
+            </main>
+
+            <aside class="blog-sidebar">
+                <h3>Bài Viết Mới Nhất</h3>
+                <ul class="sidebar-links">
+                    <li><a href="#">Bí kíp tạo hiệu ứng CSS3 thuần không lag</a></li>
+                    <li><a href="#">Top 5 tiện ích Figma cho Lập trình viên Web</a></li>
+                    <li><a href="#">Lộ trình làm chủ cấu trúc dữ liệu</a></li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <!-- BƯỚC 11: FOOTER KÈM NÚT VỀ ĐẦU TRANG VÀ MẠNG XÃ HỘI -->
+    <footer class="footer" id="contact">
+        <div class="container footer-box">
+            <div class="footer-info">
+                <p>&copy; 2026 Trần Minh Quân. Bản quyền nội dung thuộc về tác giả.</p>
+                <div class="footer-socials">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+            <a href="#hero" class="btn-top" title="Về đầu trang">&uarr;</a>
+        </div>
+    </footer>
+
+</body>
+</html>
