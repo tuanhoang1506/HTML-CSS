@@ -1,0 +1,462 @@
+/* ==========================================================================
+   CSS CHO BÀI 2: BLOG GIỚI THIỆU BẢN THÂN (PORTFOLIO)
+   Áp dụng đầy đủ 7 nhóm kiến thức CSS3 trọng tâm theo yêu cầu đề bài
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   NHÓM 1: SELECTOR
+   (Bao gồm universal, child, descendant, adjacent sibling, pseudo-class)
+   -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Slate dark modern theme */
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.container {
+    width: 88%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   NHÓM 2: USER INTERFACE (UI) & STICKY HEADER
+   -------------------------------------------------------------------------- */
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-txt {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #f8fafc;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo-txt span {
+    color: #38bdf8;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* --------------------------------------------------------------------------
+   NHÓM 3: BORDER & BACKGROUND
+   -------------------------------------------------------------------------- */
+.hero-section {
+    padding: 90px 0 60px;
+    background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 45%);
+}
+
+.hero-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1 1 500px;
+}
+
+.hero-greeting {
+    font-size: 1.2rem;
+    color: #38bdf8;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* --------------------------------------------------------------------------
+   NHÓM 4: TEXT EFFECTS & KEYFRAME ANIMATION
+   -------------------------------------------------------------------------- */
+.animated-text {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #f8fafc;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 18px rgba(56, 189, 248, 0.3); /* CSS3 Text effect */
+}
+
+.text-swap {
+    display: inline-block;
+    animation: textGlow 3s infinite alternate ease-in-out; /* CSS3 Animation */
+}
+
+@keyframes textGlow {
+    0% {
+        color: #f8fafc;
+        transform: translateY(0);
+    }
+    100% {
+        color: #38bdf8;
+        transform: translateY(-4px);
+    }
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.hero-avatar {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-box {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25);
+}
+
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------
+   NHÓM 5: 2D/3D TRANSFORM & TRANSITIONS
+   -------------------------------------------------------------------------- */
+.hero-cta .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transition mượt mà */
+}
+
+.btn-primary {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.03); /* 2D Transform */
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-secondary {
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.btn-secondary:hover {
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-3px);
+}
+
+/* SECTION CHUNG & TIÊU ĐỀ */
+section {
+    padding: 70px 0;
+}
+
+.title-decor {
+    font-size: 2rem;
+    color: #f8fafc;
+    margin-bottom: 35px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.title-decor::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 5px;
+    height: 80%;
+    background: #38bdf8;
+    border-radius: 3px;
+}
+
+/* ABOUT SECTION PHRASING */
+.lead-text {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #38bdf8;
+    text-decoration: underline dotted;
+}
+
+/* SKILL BADGES (TRANSFORM SCALE KHI HOVER) */
+.badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skill-badge {
+    background: #1e293b;
+    color: #38bdf8;
+    padding: 10px 22px;
+    border-radius: 50px; /* Pill badge */
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    transition: transform 0.25s ease, background 0.25s ease;
+    cursor: default;
+}
+
+.skill-badge:hover {
+    transform: scale(1.08); /* Phóng to nhẹ khi hover */
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* PROJECT CARDS (BORDER-RADIUS, BOX-SHADOW, HOVER EFFECT) */
+.project-cards {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.proj-card {
+    background: #1e293b;
+    border-radius: 14px;
+    overflow: hidden;
+    flex: 1 1 calc(50% - 25px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.proj-card:hover {
+    transform: translateY(-8px); /* Nổi lên khi hover */
+    box-shadow: 0 14px 28px rgba(56, 189, 248, 0.2);
+}
+
+.proj-thumb img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.proj-content {
+    padding: 22px;
+}
+
+.proj-content h3 {
+    color: #f8fafc;
+    margin-bottom: 10px;
+}
+
+.proj-content p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 18px;
+}
+
+.view-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* TIMELINE (HÀNH TRÌNH CÁ NHÂN) */
+.timeline {
+    position: relative;
+    border-left: 2px solid rgba(56, 189, 248, 0.3);
+    padding-left: 25px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #38bdf8;
+}
+
+.timeline-box {
+    background: #1e293b;
+    padding: 16px 20px;
+    border-radius: 8px;
+}
+
+.time-stamp {
+    font-size: 0.85rem;
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.timeline-box h4 {
+    color: #f8fafc;
+    margin: 5px 0;
+}
+
+/* --------------------------------------------------------------------------
+   NHÓM 6: MULTIPLE COLUMNS & FLEXBOX LAYOUT (BLOG & ASIDE)
+   -------------------------------------------------------------------------- */
+.blog-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.blog-posts {
+    flex: 2;
+}
+
+.post-item {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.post-item h3 {
+    color: #f8fafc;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.blog-sidebar {
+    flex: 1;
+    background: #182234;
+    padding: 24px;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.blog-sidebar h3 {
+    color: #f8fafc;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+}
+
+.sidebar-links {
+    list-style: none;
+}
+
+.sidebar-links li {
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+.sidebar-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sidebar-links a:hover {
+    color: #38bdf8;
+}
+
+/* FOOTER VÀ NÚT VỀ ĐẦU TRANG */
+.footer {
+    background: #090d16;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-socials {
+    margin-top: 8px;
+}
+
+.footer-socials a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #38bdf8;
+}
+
+.btn-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #1e293b;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-top:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-4px);
+}
+
+/* Responsive cơ bản */
+@media (max-width: 768px) {
+    .blog-layout {
+        flex-direction: column;
+    }
+    .proj-card {
+        flex: 1 1 100%;
+    }
+}
